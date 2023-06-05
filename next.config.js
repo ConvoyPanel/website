@@ -3,4 +3,10 @@ const nextConfig = {
   reactStrictMode: true,
 }
 
-module.exports = nextConfig
+const withNextra = require('nextra')({
+  ...nextConfig,
+  theme: 'nextra-theme-docs',
+  themeConfig: './theme.config.js',
+})
+
+module.exports = withNextra()
